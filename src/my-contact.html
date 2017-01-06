@@ -1,0 +1,56 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-contact">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      .circle{background:#ff6600 !important; color:#fff;}
+      h1{color: #ff6600; font-size: 24px; font-weight: normal; padding: 5px 0; border-bottom:2px solid #ff6600; 
+      font-weight:bold;}
+       .submit-btn{margin:0 5px; padding:5px 10px; background: #ff6600; color:#ffffff;}
+      .reset-btn{margin:0 5px; padding:5px 10px; background: #010066; color:#ffffff;}
+      .blk{width: 100%; height: 350px; margin: 0; padding: 0;}
+      .blk-left{width: 50%; margin: 10px 0px; padding:0px; float: left;}
+      .blk-right{width: 50%; margin: 10px 0px; padding:0px; float: left;}
+      google-map {
+    height: 600px;
+  }
+    </style>
+
+    <div class="card">
+      <h1>Contact Us</h1>
+      <form is="iron-form" method="get" action="/" id="basic">
+        <div class="blk">
+         <div class="blk-left">
+          Address
+        </div>
+        <div class="blk-right">
+          Google Map
+        </div>
+        </div>
+        </form>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-contact',
+    });
+  </script>
+</dom-module>

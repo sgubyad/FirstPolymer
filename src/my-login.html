@@ -1,0 +1,56 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-login">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      .card{text-align: center;}
+      .circle{background:#ff6600 !important; color:#fff;}
+      .login-icon{padding-top:10px;}
+      .login-ico{margin:0 auto; padding:0;}
+      .login-box{background: #ebebeb; width: 350px; padding:15px; border:1px solid #ebebeb;border:1px solid #aaaaaa; border-radius: 5px; margin: 0 auto;}
+      .submit-btn{margin:0 5px; padding:5px 10px; background: #ff6600; color:#ffffff;}
+      .reset-btn{margin:0 5px; padding:5px 10px; background: #010066; color:#ffffff;}
+      .btn-block{width:100%; margin: 30px 0 0 0; padding:0; }
+      .card{padding:30px 0;}
+    </style>
+
+    <div class="card">
+      <div class="circle login-ico"><image class="login-icon" src="../images/login-ico.jpg"/></div>
+      <h1>Login</h1>
+      <div class="login-box">
+        <form is="iron-form" method="get" action="/" id="basic">
+        <paper-input label="User Name">User Name</paper-input>
+        <paper-input label="Password" itemtype="Password">Password</paper-input>
+        <div class="btn-block">
+        <paper-button class="submit-btn" raised onclick="_submit(event)">Submit</paper-button>
+        <paper-button class="reset-btn" raised onclick="_reset(event)">Reset</paper-button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-login',
+    });
+  </script>
+</dom-module>
